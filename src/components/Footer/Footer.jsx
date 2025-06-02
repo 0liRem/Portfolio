@@ -32,7 +32,7 @@ const Footer = () => {
     if (!isBonfireLit) {
 
       const link = document.createElement("a");
-      link.href = "/assets/docs/CV.pdf";
+      link.href =  process.env.PUBLIC_URL + "/assets/docs/CV.pdf";
       link.download = "CV_Viau_Olivier.pdf";
       document.body.appendChild(link);
       link.click();
