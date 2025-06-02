@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects/Projects";
 import Skills from "./pages/Skills/Skills";
@@ -9,7 +9,7 @@ import Footer from './components/Footer/Footer';
 import FogTransition from './components/FogTransition/FogTransition';
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Navbar />
       <FogTransition>
       <Routes>
@@ -19,7 +19,7 @@ function App() {
       </Routes>
       </FogTransition>
       <Footer />
-    </BrowserRouter>
+    </Router>
   );
 }
 export default App;
