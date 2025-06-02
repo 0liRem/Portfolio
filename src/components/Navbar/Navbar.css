@@ -1,0 +1,154 @@
+/* Variables */
+:root {
+  --dark-bg: #0d0c0f;
+  --blood-red: #3c4d7a;
+  --golden: #c9a227;
+  --text: #e0e0e0;
+  --font-primary: "MedievalSharp", cursive;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 0; 
+  background: rgba(13, 12, 15, 0.8);
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid #3050a8;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar.scrolled {
+  background: rgba(20, 20, 25, 0.95);
+  border-bottom: 1px solid var(--blood-red);
+}
+
+.navbar-brand {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  color: var(--text);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  margin-left: 1%; 
+}
+
+.brand-glow {
+  font-size: 0.8rem;
+  color: var(--golden);
+}
+
+.brand-main {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  margin-right: 1%;
+}
+
+.nav-link {
+  color: var(--text);
+  text-decoration: none;
+  font-family: var(--font-primary);
+  position: relative;
+  transition: all 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--golden);
+}
+
+.nav-link.active {
+  color: var(--blood-red);
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--blood-red);
+}
+
+
+.mobile-menu-button {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(13, 12, 15, 0.95);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  z-index: 1000;
+  transition: all 0.3s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-nav-link {
+  color: var(--text);
+  text-decoration: none;
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  transition: all 0.3s;
+}
+
+.mobile-nav-link:hover {
+  color: var(--golden);
+}
+
+.mobile-nav-link.active {
+  color: var(--blood-red);
+}
+
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    margin-left: 4%;
+  }
+  
+  .mobile-menu-button {
+    margin-right: 4%; 
+  }
+  
+  .navbar-links {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+}

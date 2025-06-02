@@ -1,0 +1,134 @@
+/* Variables (deben estar en themes.css o aquí) */
+:root {
+  --dark-bg: #0d0c0f;
+  --blood-red: #3c4d7a;
+  --golden: #c9a227;
+  --text: #e0e0e0;
+  --font-primary: "MedievalSharp", cursive;
+}
+
+.skills-page {
+  min-height: 100vh;
+  background: var(--dark-bg);
+  color: var(--text);
+  padding: 2rem;
+  font-family: var(--font-primary);
+}
+
+.skills-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 8px #2a3a66;
+}
+
+.text-blood {
+  color: var(--blood-red);
+}
+
+.skills-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+/* Filtro de categorías */
+.skills-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.filter-button {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid var(--golden);
+  color: var(--golden);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: var(--font-primary);
+}
+
+.filter-button:hover {
+  background: rgba(201, 162, 39, 0.1);
+}
+
+.filter-button.active {
+  background: var(--golden);
+  color: var(--dark-bg);
+  font-weight: bold;
+}
+
+/* Lista de habilidades */
+.skills-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill-item {
+  margin-bottom: 1.5rem;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  font-size: 1.1rem;
+}
+
+.skill-level {
+  color: var(--golden);
+}
+
+/* Barra de habilidades */
+.skill-bar-container {
+  width: 100%;
+  height: 8px;
+  background: rgba(138, 3, 3, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--blood-red), #4763b1);
+  border-radius: 4px;
+  transition: width 1.5s ease-in-out;
+}
+
+.skill-bar.animate {
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px var(--blood-red);
+  }
+  to {
+    box-shadow: 0 0 15px var(--blood-red);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 2rem;
+  }
+  .skills-subtitle {
+    font-size: 1rem;
+  }
+  .skills-filter {
+    gap: 0.3rem;
+  }
+  .filter-button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+  }
+}

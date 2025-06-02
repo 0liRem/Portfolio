@@ -1,0 +1,318 @@
+:root {
+  --dark-bg: #0d0c0f;
+  --blood-red: #3c4d7a;
+  --golden: #c9a227;
+  --text: #e0e0e0;
+  --ember-orange: #ff6b35;
+  --soul-blue: #4a90e2;
+}
+
+.footer {
+  background: rgba(13, 12, 15, 0.95);
+  border-top: 2px solid var(--blood-red);
+  padding: 2rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--golden), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/*BONFIRE COMPONENTS*/
+.bonfire-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bonfire {
+  width: 80px;
+  height: 80px;
+  background: url('https://www.hyperhype.es/wp-content/uploads/2022/04/Dark-Souls-e1650300487870.png') no-repeat center/cover;
+  cursor: pointer;
+  transition: all 0.3s;
+  filter: drop-shadow(0 0 5px rgba(201, 162, 39, 0.5));
+  border-radius: 50%;
+  position: relative;
+}
+
+.bonfire::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px solid var(--golden);
+  border-radius: 50%;
+  background: transparent;
+  opacity: 0;
+  transition: opacity 0.3s;
+  animation: rotating-border 3s linear infinite;
+}
+
+.bonfire:hover::before {
+  opacity: 0.7;
+}
+
+.bonfire.lit {
+  background: url('https://raw.githubusercontent.com/TanZng/TanZng/master/assets/bonefire.gif') no-repeat center/cover;
+  animation: bonfire-glow 2s infinite alternate;
+}
+
+.bonfire-label {
+  color: var(--golden);
+  font-size: 0.8rem;
+  font-family: 'MedievalSharp', cursive;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.bonfire-message {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: var(--golden);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-family: 'MedievalSharp', cursive;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  border: 1px solid var(--golden);
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  20% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  80% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+}
+
+@keyframes bonfire-glow {
+  0% { filter: drop-shadow(0 0 10px var(--golden)); }
+  100% { filter: drop-shadow(0 0 25px var(--ember-orange)); }
+}
+
+/*Alabado sea circulo elden*/
+.dark-souls-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.message-container {
+  background: 
+    linear-gradient(rgba(244, 241, 232, 0.1), rgba(232, 224, 208, 0.2)),
+    url('https://cdn.textures4photoshop.com/tex/thumbs/grunge-stained-old-paper-texture-130.jpg'),
+    #f4f1e8;
+  background-size: cover, 200px 200px, cover;
+  background-blend-mode: multiply, multiply, normal;
+  border: 1px solid rgba(139, 115, 85, 0.4);
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+  position: relative;
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: rotate(-0.5deg);
+}
+
+.message-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(139, 115, 85, 0.1) 2px,
+      rgba(139, 115, 85, 0.1) 3px
+    );
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+@keyframes rotating-border {
+  0% { 
+    border-color: var(--golden);
+    box-shadow: 0 0 10px var(--golden);
+  }
+  50% { 
+    border-color: var(--ember-orange);
+    box-shadow: 0 0 15px var(--ember-orange);
+  }
+  100% { 
+    border-color: var(--golden);
+    box-shadow: 0 0 10px var(--golden);
+  }
+}
+
+.message-text {
+  color: var(--text);
+  font-family: 'MedievalSharp', cursive;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.87);
+}
+
+.message-subtitle {
+  color: rgb(255, 255, 255);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.soul-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.soul-rune {
+  width: 60px;
+  height: 60px;
+  background: 
+    url('https://darksouls3.wiki.fextralife.com/file/Dark-Souls-3/(Large)_Soul_of_a_Weary_Warrior_Icon.png') no-repeat center/70%,
+    linear-gradient(135deg, var(--soul-blue) 0%, var(--blood-red) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  border: 2px solid var(--golden);
+  box-shadow: 
+    0 0 10px var(--soul-blue),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+  animation: soul-pulse 2s infinite;
+  overflow: hidden;
+}
+
+
+.soul-rune::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, transparent 40%, rgba(74, 144, 226, 0.3) 100%);
+  border-radius: 50%;
+}
+
+.soul-rune:hover {
+  transform: scale(1.1);
+  box-shadow: 
+    0 0 20px var(--soul-blue),
+    0 0 30px var(--golden),
+    inset 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes soul-pulse {
+  0%, 100% { 
+    transform: scale(1); 
+    box-shadow: 
+      0 0 10px var(--soul-blue),
+      inset 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+  50% { 
+    transform: scale(1.05); 
+    box-shadow: 
+      0 0 20px var(--soul-blue),
+      0 0 15px var(--golden),
+      inset 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.soul-counter {
+  color: var(--golden);
+  font-family: 'MedievalSharp', cursive;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.soul-label {
+  color: var(--text);
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  grid-column: 1 / -1;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(60, 77, 122, 0.3);
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: var(--text);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  color: var(--golden);
+  transform: translateY(-3px) scale(1.1);
+  filter: drop-shadow(0 0 10px var(--golden));
+}
+
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .message-container {
+    padding: 1rem 1.5rem;
+  }
+  
+  .bonfire, .soul-rune {
+    width: 60px;
+    height: 60px;
+  }
+}

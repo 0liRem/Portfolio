@@ -1,0 +1,62 @@
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+
+@keyframes glow-red {
+  0% { box-shadow: 0 0 5px var(--blood-red); }
+  100% { box-shadow: 0 0 20px var(--blood-red); }
+}
+
+@keyframes glow-gold {
+  0% { box-shadow: 0 0 5px var(--golden); }
+  100% { box-shadow: 0 0 20px var(--golden); }
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+.glow-red {
+  animation: glow-red 1.5s alternate infinite;
+}
+
+.glow-gold {
+  animation: glow-gold 1.5s alternate infinite;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+
+.typewriter {
+  overflow: hidden;
+  border-right: 3px solid var(--golden);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--golden); }
+}

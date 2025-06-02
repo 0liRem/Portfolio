@@ -1,0 +1,61 @@
+
+@media (max-width: 768px) {
+
+  body {
+    font-size: 14px;
+  }
+
+
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+
+  .title {
+    font-size: 2.2rem !important;
+  }
+
+  .subtitle {
+    font-size: 1rem !important;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+
+  .skill-item {
+    margin-bottom: 1rem !important;
+  }
+
+  .skill-name {
+    font-size: 1rem !important;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .navbar-links {
+    gap: 1rem !important;
+  }
+}
+
+
+@media (min-width: 1025px) {
+
+  .project-card:hover {
+    transform: translateY(-10px) !important;
+  }
+
+  .nav-link:hover::after {
+    width: 100% !important;
+  }
+}

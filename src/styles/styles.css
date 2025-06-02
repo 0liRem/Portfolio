@@ -1,0 +1,59 @@
+
+@import url('./themes.css');
+@import url('./animations.css');
+@import url('./responsive.css');
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--border-radius);
+  font-family: var(--font-primary);
+  transition: var(--transition-normal);
+  display: inline-block;
+}
+
+.btn-primary {
+  background: var(--blood-red);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--blood-red-dark);
+  animation: pulse 1.5s infinite;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--golden);
+  color: var(--golden);
+}
+
+.btn-outline:hover {
+  background: rgba(201, 162, 39, 0.1);
+}
+
+
+.paper-effect {
+  background: url('https://cdn.textures4photoshop.com/tex/thumbs/grunge-stained-old-paper-texture-130.jpg');
+  background-size: cover;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--golden);
+}

@@ -1,0 +1,70 @@
+:root {
+
+  --dark-bg: #0d0c0f; 
+  --dark-bg-secondary: #1a181b; 
+  --blood-red: #3c4d7a; 
+  --blood-red-dark: #1f2d53; 
+  --golden: #c9a227; 
+  --golden-light: #e0c040; 
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0; 
+
+  /* Fuentes */
+  --font-primary: 'MedievalSharp', cursive;
+  --font-secondary: 'Crimson Text', serif;
+  --font-code: 'Fira Code', monospace; 
+
+
+  --border-radius: 8px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px #22325f;
+  --shadow-lg: 0 8px 24px rgba(201, 162, 39, 0.2);
+
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+  font-family: var(--font-secondary);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+a {
+  color: var(--golden);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+a:hover {
+  color: var(--golden-light);
+  text-shadow: 0 0 5px rgba(201, 162, 39, 0.5);
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blood-red);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blood-red-dark);
+}
