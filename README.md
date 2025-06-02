@@ -1,10 +1,9 @@
 ![React](https://img.shields.io/badge/React-18.2.0-blue.svg)
-![Storybook](https://img.shields.io/badge/Storybook-7.0.0-FF4785.svg)
 ![React Router](https://img.shields.io/badge/React_Router-6.14.2-CA4245.svg)
 
 ##  Descripción
 Portafolio personal diseñado para mostrar mis proyectos y habilidades como desarrollador, con una interfaz inmersiva que combina:
-- **Diseño oscuro medieval** (colores rojos sangre, dorados y tipografía gótica).
+- **Diseño oscuro medieval** (colores frios, dorados y tipografía gótica).
 - **Efectos interactivos** (bonfire encendible, barras de habilidades animadas).
 - **Totalmente responsive** (móvil, tablet y desktop).
 
