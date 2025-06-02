@@ -3,14 +3,14 @@ import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import "./Projects.css";
 
 const Projects = () => {
-  //Lista projectos
+  //Lista proyectos
   const [projects] = useState([
     {
       id: 1,
       title: "Ecommerce",
       description: "Un ecommerce simple de libros donde se tiene carrito persistente, sistema de recomendaciones y búsqueda dinámica.",
       tags: ["React", "CSS"],
-      image: "/assets/images/libros.png",
+      image: process.env.PUBLIC_URL + '/assets/images/libros.png',
       githubLink: "https://github.com/0liRem/Ecommerce",
       demoLink: "https://0lirem.github.io/Ecommerce/",
     },
@@ -20,7 +20,7 @@ const Projects = () => {
       description: "Usando PostgreSQL y python probar las transacciones para crear un entorno de estrés y ver que tantas reservas falsas se pueden llegar a crear.",
       tags: ["Python", "PSQL"],
       image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjg9qQiOjpHhmTJJDo72-m-P-3SYwBegMSfLBMS_7Sgslbl9CKx0q8k0axtRfG4S-nvhm9EDwJvwm6zs-1bugbafLCPW4Z8Z6JD05jcAfGEPFyLn8K0ERKC3Ekfm6xI8QXuhOov29iM5fj1/s1600/Stress1.gif",
-      githubLink: "https://github.com/tuusuario/darksouls-inventory",
+      githubLink: "https://github.com/0liRem/TicketManagmentAPI",
       demoLink: "",
     },
     {
@@ -28,7 +28,7 @@ const Projects = () => {
       title: "Novela visual WEB",
       description: "Utilizando solamente javascript como cerebro, creé una novela visual interactiva con varios finales",
       tags: ["JavaScript","HTML5","CSS"],
-      image: "",
+      image: "/assets/images/libros.png",
       githubLink: "",
       demoLink: "",
     },
