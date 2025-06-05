@@ -28,9 +28,9 @@ const Projects = () => {
       title: "Novela visual WEB",
       description: "Utilizando solamente javascript como cerebro, creé una novela visual interactiva con varios finales",
       tags: ["JavaScript","HTML5","CSS"],
-      image: "/assets/images/libros.png",
-      githubLink: "",
-      demoLink: "",
+      image:  process.env.PUBLIC_URL + '/assets/images/vn.png',
+      githubLink: "https://github.com/0liRem/Visual_Novel",
+      demoLink: "https://0lirem.github.io/Visual_Novel/paginas/historia.html",
     },
   ]);
 
